@@ -1,26 +1,96 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+.hero {
+	background-image: url("/assets/images/car-2.jpg");
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.overlay {
+	@apply absolute top-0 bottom-0 left-0 right-0;
+	background-color: rgba(0, 0, 0, 0.7);
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.2),
+		rgba(0, 0, 255, 0.2)
+	);
+}
+
+.heading {
+	@apply text-4xl font-bold;
+}
+
+.plan {
+	@apply border-2 mr-2 px-5 py-2 rounded-md border-slate-700 cursor-pointer;
+}
+
+.active {
+	@apply bg-slate-700 text-white font-semibold;
+}
+
+.input {
+	@apply border mr-4 py-5 mb-5 px-5 rounded-lg bg-blue-50 w-full md:w-72;
+}
+
+.single-contact-info:before {
+	position: absolute;
+	content: "";
+	top: 30%;
+	left: -90px;
+	width: 540px;
+	height: 540px;
+	background-color: rgba(255, 255, 255, 0.1);
+	z-index: -1;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-transform: translateY(0) rotate(10deg);
+	transform: translateY(0) rotate(10deg);
+}
+
+.single-contact-info:first-child {
+	margin-top: 0;
+}
+
+.single-contact-info {
+	@apply w-full py-5 px-10;
+	margin-top: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	/* padding: 20px 20px 20px 30px; */
+	border-radius: 10px;
+	-webkit-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background: #4777f4 none repeat scroll 0 0;
+	color: #fff;
+}
+@media screen and (max-width: 480px) {
+	html,
+	body {
+		scroll-padding: 40px;
+	}
 }
