@@ -10,9 +10,15 @@
 	font-family: "Nunito", sans-serif;
 }
 
+p {
+	@apply font-body;
+	font-family: "Nunito", sans-serif;
+}
+
 html,
 body {
 	scroll-behavior: smooth;
+	font-family: "Nunito", sans-serif;
 }
 
 .hero {
