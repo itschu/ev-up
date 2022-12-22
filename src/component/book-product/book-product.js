@@ -11,7 +11,7 @@ const BookProduct = () => {
 	const email = useRef(null);
 	const phone_num = useRef(null);
 
-	const sendMail = (e) => {
+	const submitForm = (e) => {
 		e.preventDefault();
 
 		const details = {
@@ -23,6 +23,11 @@ const BookProduct = () => {
 			price: price[selected.type][selected.billed],
 			type: selected.type,
 		};
+
+		const req = fetch("/api/mail", {
+			method: "post",
+			body: JSON.stringify(details),
+		});
 
 		setSubmitted(true);
 	};
@@ -37,7 +42,7 @@ const BookProduct = () => {
 						</h2>
 					</div>
 					<div className="flex flex-col-reverse md:flex-row gap-7">
-						<form onSubmit={sendMail}>
+						<form onSubmit={submitForm}>
 							<div>
 								<input
 									ref={f_name}

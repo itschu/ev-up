@@ -8,15 +8,14 @@ const Hero = () => {
 				className="text-white z-10 text-2xl md:text-6xl font-bold mt-10"
 				style={{ maxWidth: "20ch" }}
 			>
-				Lorem ipsum dolor lamar sit amet Lorem ipsum.
+				Think about the planet, Go emissions free
 			</h1>
 			<p
 				className="text-white z-10 font-normal mt-3 text-lg"
 				style={{ maxWidth: "50ch" }}
 			>
-				Lorem ipsum dolor lamar sit amet Lorem ipsum dolor lamar sit
-				amet Lorem ipsum dolor lamar sit amet Lorem ipsum dolor lamar
-				sit amet Lorem ipsum dolor.
+				Do the earth a solid by skipping the gas station and driving
+				battery-electric vehicles, or even a hybrid vehicle.
 			</p>
 
 			<div className="z-10 mt-10">

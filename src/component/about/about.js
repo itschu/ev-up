@@ -4,11 +4,19 @@ const About = () => {
 	return (
 		<div className="w-full p-5 md:p-20 md:px-28" id="about">
 			<div className="mb-10 mt-5 md:mb-20 flex flex-col items-center">
-				<h2 className="heading mb-5 mt-5 text-center">Features</h2>
+				<h2 className="heading mb-5 mt-5 text-center md:px-20">
+					Book a car in advance and we'll deliver it to you; when you
+					want it, where you want it.
+				</h2>
 				<p className="text-center" style={{ maxWidth: "88ch" }}>
-					lorem donec nec justo eget felis facilisis fermentum.
-					Aliquam porttitor mauris sit amet lorem donec nec justo eget
-					felis facilisis fermentum. Aliquam porttitor mauris sit
+					You can easily rent an electric car in Canada anytime, our
+					electric cars free-float and ready on the streets of major
+					cities. No car rental stations, no opening hours, no waiting
+					time. Our car-sharing rates are all-inclusive and more
+					flexible than traditional car rental – you don&amp;t pay
+					extra for parking, charging, GPS, automatic transmission, or
+					insurance. From 1 minute to 30 days, you decide the rental
+					duration you want.
 				</p>
 			</div>
 			<div className="flex flex-col md:flex-row justify-center">
