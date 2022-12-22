@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const sendMail = () => {
+const sendMail = (message) => {
 	return new Promise((resolve, reject) => {
 		const transporter = nodemailer.createTransport({
 			host: "smtpout.secureserver.net",
@@ -19,7 +19,7 @@ const sendMail = () => {
 			from: "bookingassistant@simpleerent.ca",
 			to: "chucreates@gmail.com",
 			subject: "ev-up test mail",
-			text: "teteyubhnkjnoimcpo dokmoidm kjn kln o'ksn oj sjo",
+			text: message,
 		};
 
 		transporter.sendMail(mail_config, (err, info) => {
@@ -33,7 +33,7 @@ const sendMail = () => {
 };
 
 export default function handler(req, res) {
-	sendMail()
+	sendMail(req.body)
 		.then((res) => console.log(res.message))
 		.catch((err) => console.log(err.message));
 	res.status(200).json({ name: "John Doe" });
