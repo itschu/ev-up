@@ -18,7 +18,7 @@ const Product = () => {
 					className={`plan ${active === "weekly" && "active"}`}
 					onClick={() => setActive("weekly")}
 				>
-					Weekly
+					Bi Weekly
 				</span>
 				<span
 					className={`plan ${active === "monthly" && "active"}`}
@@ -28,7 +28,7 @@ const Product = () => {
 				</span>
 			</div>
 
-			<div className="flex justify-center flex-col md:flex-row gap-7 md:gap-1">
+			<div className="flex justify-center flex-col md:flex-row gap-7 md:gap-1 pb-10">
 				<SingleProductClassic active={active} />
 				<SingleProductPremuim active={active} />
 			</div>

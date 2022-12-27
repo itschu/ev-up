@@ -5,24 +5,25 @@ const Nav = () => {
 	const [viewMenu, setViewMenu] = useState(false);
 	return (
 		<>
-			<div className="w-full bg-white flex items-center justify-between px-10 md:px-28 py-3 fixed top-0 left-0 right-0 z-20 shadow-lg">
-				<div
-					id="logo"
-					className="w-12 h-12 bg-slate-600 rounded-full"
-				/>
+			<div className="w-full bg-white flex items-center justify-between px-4 md:px-28 py-3 fixed top-0 left-0 right-0 z-20 shadow-lg">
+				<Link id="logo" className="pointer-cursor" href={"/"}>
+					<h1 className="text-blue-600 z-10 text-xl md:text-2xl font-bold md:font-extrabold border-2 md:border-4 border-blue-900 px-5 py-2">
+						EV-UP
+					</h1>
+				</Link>
 				<ul className="hidden md:flex">
-					<Link href={"/"}>
+					{/* <Link href={"/"}>
 						<li className="inline mx-4">Home</li>
 					</Link>
 					<Link href={"/#about"}>
 						<li className="inline mx-4">Features</li>
-					</Link>
+					</Link> */}
 					<Link href={"/#products"}>
 						<li className="inline mx-4">Products</li>
 					</Link>
-					<Link href={"/#faq"}>
+					{/* <Link href={"/#faq"}>
 						<li className="inline mx-4">FAQ&apos;s</li>
-					</Link>
+					</Link> */}
 					<Link href={"#contact"}>
 						<li className="inline mx-4">Contact</li>
 					</Link>
@@ -66,23 +67,23 @@ const Nav = () => {
 			</div>
 
 			<div
-				className={`transition-all duration-150 w-full h-56 shadow-lg fixed z-20 bg-white pt-5 ${
+				className={`transition-all duration-150 w-full h-28 shadow-lg fixed z-20 bg-white pt-5 ${
 					viewMenu || "-top-80"
 				}`}
 				style={{ marginTop: "4.43rem" }}
 			>
-				<Link href={"/"} onClick={() => setViewMenu(false)}>
+				{/* <Link href={"/"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Home</li>
 				</Link>
 				<Link href={"/#about"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Features</li>
-				</Link>
+				</Link> */}
 				<Link href={"/#products"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Products</li>
 				</Link>
-				<Link href={"/#faq"} onClick={() => setViewMenu(false)}>
+				{/* <Link href={"/#faq"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">FAQ&apos;s</li>
-				</Link>
+				</Link> */}
 				<Link href={"#contact"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Contact</li>
 				</Link>

@@ -5,7 +5,7 @@ const About = () => {
 		<div className="w-full p-5 md:p-20 md:px-28" id="about">
 			<div className="mb-10 mt-5 md:mb-20 flex flex-col items-center">
 				<h2 className="heading mb-5 mt-5 text-center md:px-20">
-					Book a car in advance and we&aspo;ll deliver it to you; when
+					Book a car in advance and we&apos;ll deliver it to you; when
 					you want it, where you want it.
 				</h2>
 				<p className="text-center" style={{ maxWidth: "88ch" }}>

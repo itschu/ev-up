@@ -1,8 +1,13 @@
+import Link from "next/link";
+
 const Button = ({ children }) => {
 	return (
-		<button className="text-white border px-10 py-3 rounded-md">
+		<Link
+			className="text-white border px-10 py-3 rounded-md"
+			href={"/#products"}
+		>
 			{children}
-		</button>
+		</Link>
 	);
 };
 

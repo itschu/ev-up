@@ -26,6 +26,9 @@ const SingleProductPremuim = ({ active }) => {
 				</p>
 				<p className="mb-2 font-semibold">&rarr; Delivery Service</p>
 				<p className="mb-2 font-semibold">&rarr; Bi Weekly Detailing</p>
+				<p className="mb-2 font-semibold">
+					&rarr; Premium Connectivity
+				</p>
 
 				<div className="flex items-center">
 					<p className="font-bold text-2xl mt-2">

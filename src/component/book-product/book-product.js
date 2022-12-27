@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import { useSelectedProduct } from "../../hooks/selected-product";
 import { currencyFractionDigits, price } from "../../utils/faq-data";
@@ -5,6 +6,7 @@ import { currencyFractionDigits, price } from "../../utils/faq-data";
 const BookProduct = () => {
 	const { selected } = useSelectedProduct();
 	const [submitted, setSubmitted] = useState(false);
+	const router = useRouter();
 
 	const f_name = useRef(null);
 	const l_name = useRef(null);
@@ -47,12 +49,14 @@ const BookProduct = () => {
 								<input
 									ref={f_name}
 									placeholder="First Name"
+									type={"text"}
 									className="input"
 									required
 								/>
 								<input
 									ref={l_name}
 									placeholder="Last Name"
+									type={"text"}
 									className="input"
 									required
 								/>
@@ -63,12 +67,14 @@ const BookProduct = () => {
 									ref={email}
 									placeholder="Email"
 									className="input"
+									type={"email"}
 									required
 								/>
 								<input
 									ref={phone_num}
 									placeholder="Phone Number"
 									className="input"
+									type={"number"}
 									required
 								/>
 							</div>
@@ -83,7 +89,7 @@ const BookProduct = () => {
 
 						<div className="relative">
 							<div className="single-contact-info ">
-								<svg
+								{/* <svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
@@ -96,7 +102,7 @@ const BookProduct = () => {
 										strokeLinejoin="round"
 										d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
 									/>
-								</svg>
+								</svg> */}
 								<span className="ml-3 text-2xl font-extrabold">
 									EV-UP{" "}
 									<span className="capitalize">
@@ -141,7 +147,10 @@ const BookProduct = () => {
 						strokeWidth={2}
 						stroke="currentColor"
 						className="w-6 h-6 absolute right-3 top-3 md:top-12 cursor-pointer"
-						onClick={() => setSubmitted(false)}
+						onClick={() => {
+							// setSubmitted(false);
+							router.push("/");
+						}}
 					>
 						<path
 							strokeLinecap="round"
@@ -151,7 +160,8 @@ const BookProduct = () => {
 					</svg>
 
 					<p className="bg-green-400 w-full text-center py-20 rounded-xl font-bold text-xl px-5">
-						We have received your request, we will contact you soon!
+						We have received your request, we will contact you
+						shortly!
 					</p>
 				</div>
 			)}
