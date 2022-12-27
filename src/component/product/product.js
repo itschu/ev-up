@@ -13,6 +13,7 @@ const Product = () => {
 				Our Products
 			</h2>
 
+			{/* 
 			<div className="mb-8">
 				<span
 					className={`plan ${active === "weekly" && "active"}`}
@@ -26,7 +27,7 @@ const Product = () => {
 				>
 					Monthly
 				</span>
-			</div>
+			</div> */}
 
 			<div className="flex justify-center flex-col md:flex-row gap-7 md:gap-1 pb-10">
 				<SingleProductClassic active={active} />

@@ -25,7 +25,7 @@ const SingleProductPremuim = ({ active }) => {
 					&rarr; Road Side Assistance
 				</p>
 				<p className="mb-2 font-semibold">&rarr; Delivery Service</p>
-				<p className="mb-2 font-semibold">&rarr; Bi Weekly Detailing</p>
+				<p className="mb-2 font-semibold">&rarr; Biweekly Detailing</p>
 				<p className="mb-2 font-semibold">
 					&rarr; Premium Connectivity
 				</p>
