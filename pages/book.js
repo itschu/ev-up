@@ -9,9 +9,11 @@ export default function Book() {
 			<Head>
 				<title>EV UP | Book Product</title>
 			</Head>
-			<Nav />
-			<BookProduct />
-			<Footer />
+			<div className="min-h-screen flex flex-col justify-between">
+				<Nav />
+				<BookProduct />
+				<Footer />
+			</div>
 		</>
 	);
 }
