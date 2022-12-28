@@ -12,6 +12,7 @@ export default function Book() {
 			<div className="min-h-screen flex flex-col justify-between">
 				<Nav />
 				<BookProduct />
+
 				<Footer />
 			</div>
 		</>
