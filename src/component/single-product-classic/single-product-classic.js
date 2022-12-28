@@ -27,12 +27,14 @@ const SingleProductClassic = ({ active }) => {
 				<p className="mb-2 font-semibold">&rarr; Delivery Service</p>
 
 				<div className="flex items-center">
-					<p className="font-bold text-2xl mt-2">
+					<span className="font-bold text-2xl mt-2">
 						$
 						{price.classic[active].toLocaleString("en-US", {
 							maximumFractionDigits: currencyFractionDigits,
 						})}
-					</p>
+						&nbsp;
+					</span>
+					<sub className="font-bold text-sm"> / month</sub>
 					&nbsp;&nbsp;
 					<sub className="font-bold text-sm">+ tax</sub>
 				</div>

@@ -51,7 +51,7 @@ const Footer = () => {
 						/>
 					</svg>
 
-					<span>support@ev-up.com</span>
+					<span> &nbsp;support@ev-up.com</span>
 				</Link>
 			</div>
 

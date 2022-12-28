@@ -18,15 +18,15 @@ const Nav = () => {
 					<Link href={"/#about"}>
 						<li className="inline mx-4">Features</li>
 					</Link> */}
-					<Link href={"/#products"}>
+					<a href={"/#products"}>
 						<li className="inline mx-4">Products</li>
-					</Link>
+					</a>
 					{/* <Link href={"/#faq"}>
 						<li className="inline mx-4">FAQ&apos;s</li>
 					</Link> */}
-					<Link href={"#contact"}>
+					<a href={"#contact"}>
 						<li className="inline mx-4">Contact</li>
-					</Link>
+					</a>
 				</ul>
 
 				<div className="block md:hidden">
@@ -78,15 +78,15 @@ const Nav = () => {
 				<Link href={"/#about"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Features</li>
 				</Link> */}
-				<Link href={"/#products"} onClick={() => setViewMenu(false)}>
+				<a href={"/#products"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Products</li>
-				</Link>
+				</a>
 				{/* <Link href={"/#faq"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">FAQ&apos;s</li>
 				</Link> */}
-				<Link href={"#contact"} onClick={() => setViewMenu(false)}>
+				<a href={"#contact"} onClick={() => setViewMenu(false)}>
 					<li className="list-none mb-4 mx-4">Contact</li>
-				</Link>
+				</a>
 			</div>
 		</>
 	);

@@ -4,14 +4,12 @@ import mailTemp from "../../src/component/mail-temp";
 const sendMail = (message) => {
 	return new Promise((resolve, reject) => {
 		const transporter = nodemailer.createTransport({
-			host: "server188.web-hosting.com",
+			host: process.env.EMAIL_HOST,
 			port: 465,
 			secure: true,
 			auth: {
-				// user: "info@simpleerent.ca",
-				user: "evup@peculyn.online",
-				// pass: "SimpleeRent2021!",
-				pass: "0d-Q&?!w;z7c",
+				user: process.env.EMAIL_USER,
+				pass: process.env.EMAIL_PASS,
 			},
 			tls: {
 				ciphers: "SSLv3",
@@ -22,10 +20,9 @@ const sendMail = (message) => {
 			JSON.parse(message);
 
 		const mail_config = {
-			from: "evup@peculyn.online",
-			// to: "chucreates@gmail.com",
+			from: process.env.EMAIL_USER,
 			to: "Fritzlor.auguste@live.com",
-			subject: "ev-up test mail",
+			subject: "New Order",
 			html: mailTemp(
 				firstName,
 				lastName,

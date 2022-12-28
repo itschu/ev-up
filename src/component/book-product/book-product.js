@@ -132,7 +132,8 @@ const BookProduct = () => {
 									].toLocaleString("en-US", {
 										maximumFractionDigits:
 											currencyFractionDigits,
-									})}
+									})}{" "}
+									/ month
 								</span>
 							</div>
 						</div>
